@@ -9,6 +9,7 @@ class Post(models.Model):
             default=timezone.now)
     published_date = models.DateTimeField(
             blank=True, null=True)
+    rating = models.IntegerField(default=0)
 
     def publish(self):
         self.published_date = timezone.now()
